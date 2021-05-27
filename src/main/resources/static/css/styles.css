@@ -1,0 +1,19 @@
+button {
+    width: 150px;
+    height: 30px;
+    color: #4940d2;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    font: normal 17px arial;
+}
+
+textarea {
+    width: 300px;
+    height: 60px;
+    color: #4940d2;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    font: normal 40px arial;
+}

@@ -3,37 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Click counter</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-<div>
+<p>
     <textarea id="count" disabled="disabled">  </textarea>
-    <button id="clicker" type="submit" onclick="updateCount()">Click</button>
-</div>
-
-<script>
-    getCount();
-
-    function getCount() {
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", '/click-counter/value', false)
-        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        xhr.send();
-
-        if (xhr.status == 200) {
-            document.getElementById("count").value = JSON.parse(xhr.response).value;
-        }
-    }
-
-    function updateCount() {
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", '/click-counter/update', false)
-        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        xhr.send();
-
-        if (xhr.status == 200) {
-            getCount();
-        }
-    }
-</script>
+</p>
+<p>
+    <button id="clicker" type="submit">Click</button>
+</p>
+<script src="./js/action.js"></script>
 </body>
 </html>
