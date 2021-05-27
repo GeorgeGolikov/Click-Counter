@@ -29,7 +29,6 @@ public class ClickCountServiceImpl implements ClickCountService {
 
     @Override
     public void updateClicksCount() {
-        Integer count = loadClicksCount() + 1;
-        repository.save(new ClickCount(clickCountId, count));
+        repository.modifyById(clickCountId);
     }
 }
